@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="900,4121" sap2010:WorkflowViewState.IdRef="Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="900,4066" sap2010:WorkflowViewState.IdRef="Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -111,7 +111,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="910,4056" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="910,4001" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="username" />
       <Variable x:TypeArguments="x:String" Name="password" />
@@ -124,19 +124,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="848,3945" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="848,3890" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="786,3834" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="e18112d0-6eb1-46ca-b308-69e11f5a4489" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="786,3779" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="e18112d0-6eb1-46ca-b308-69e11f5a4489" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="752,3617" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="752,3562" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,18 +151,18 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[IsLoginNeeded]" sap:VirtualizedContainerService.HintSize="690,3357" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[IsLoginNeeded]" sap:VirtualizedContainerService.HintSize="690,3302" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="656,3002" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence sap:VirtualizedContainerService.HintSize="656,2947" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="614,2914" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="614,2859" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
-                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="572,2739" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="572,2570" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -267,12 +267,13 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[ShouldStopRetry]" sap:VirtualizedContainerService.HintSize="510,129" sap2010:WorkflowViewState.IdRef="CheckTrue_1" Result="[ShouldStopRetry]" />
                           </Sequence>
                         </ActivityAction>
                       </ui:RetryScope.ActivityBody>
                       <ui:RetryScope.Condition>
-                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[ShouldStopRetry]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckTrue_1" Result="[ShouldStopRetry]" />
+                        </ActivityFunc>
                       </ui:RetryScope.Condition>
                     </ui:RetryScope>
                   </Sequence>
