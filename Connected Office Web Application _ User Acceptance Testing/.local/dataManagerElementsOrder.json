@@ -22,16 +22,49 @@
       "Path": "Customer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "targetURL&Sequence_10",
-        "canRead&Sequence_8",
-        "currentURL&Sequence_1",
-        "currentCellPhone&Sequence_1",
-        "prevCellPhone&Sequence_6",
-        "isCreated&Sequence_1",
-        "tempFilePath&Sequence_1",
-        "dataFilePath&Sequence_1",
+        "prevCellPhone&Sequence_1",
+        "canRead&Sequence_1",
+        "targetURL&Sequence_1",
         "objectName&Sequence_1",
-        "Customers&Sequence_1"
+        "Customers&Sequence_1",
+        "currentCellPhone&Sequence_1",
+        "currentURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "data_file_path"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "username&Sequence_1",
+        "password&Sequence_1",
+        "IsLoginNeeded&Sequence_1",
+        "IsLoginFailed&Sequence_1",
+        "ShouldStopRetry&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Order.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "currentURL&Sequence_5",
+        "targetURL&Sequence_5",
+        "hours&Sequence_5",
+        "minutes&Sequence_5",
+        "day&Sequence_5",
+        "month&Sequence_5",
+        "year&Sequence_5",
+        "matchPattern&Sequence_1",
+        "Orders&Sequence_1",
+        "objectName&Sequence_1",
+        "tempFilePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
