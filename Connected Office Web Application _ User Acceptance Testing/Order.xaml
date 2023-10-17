@@ -549,7 +549,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;E2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;FALSE&quot;]" />
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;A problem occured when trying to create record for Customer: &quot; + CurrentRow.Item(&quot;OrderID&quot;).ToString]" />
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;A problem occured when trying to create record for Order: &quot; + CurrentRow.Item(&quot;OrderID&quot;).ToString]" />
                                         </Sequence>
                                       </If.Else>
                                     </If>
