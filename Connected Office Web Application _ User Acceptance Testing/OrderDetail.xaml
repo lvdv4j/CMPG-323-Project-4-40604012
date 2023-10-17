@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1292,10250</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1292,10454</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OrderDetail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,48 +111,41 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OrderDetail" sap:VirtualizedContainerService.HintSize="1302,10185" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OrderDetail" sap:VirtualizedContainerService.HintSize="1302,10389" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="OrderDetails" />
-      <Variable x:TypeArguments="x:String" Name="objectName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Order Details</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Order Details" Name="objectName" />
       <Variable x:TypeArguments="x:String" Name="currentURL" />
-      <Variable x:TypeArguments="x:String" Name="targetURL">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails" Name="targetURL" />
       <Variable x:TypeArguments="x:String" Name="currentQuantity" />
       <Variable x:TypeArguments="x:String" Name="prevQuantity" />
       <Variable x:TypeArguments="x:Boolean" Name="canRead" />
+      <Variable x:TypeArguments="x:Int32" Name="currentCell" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Define the scope in which the excel file is going to be used" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1240,10074" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Define the scope in which the excel file is going to be used" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1240,10278" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1206,9956" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1206,10160" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Get Excel File" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1144,9845" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[filePath]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Get Excel File" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1144,10049" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[filePath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110,9505" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110,9749" sap2010:WorkflowViewState.IdRef="Sequence_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,31 +158,47 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:ReadRangeX>
-                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open web browser" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="1048,9154" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7636dfc3-6bf0-4818-b3fe-429635ff19bc" Version="V2">
+                    <Assign sap:VirtualizedContainerService.HintSize="1048,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[currentCell]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open web browser" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="1048,9276" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7636dfc3-6bf0-4818-b3fe-429635ff19bc" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence sap2010:Annotation.AnnotationText="Begin testing process for order detail records" DisplayName="Test" sap:VirtualizedContainerService.HintSize="1014,8906" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <Sequence sap2010:Annotation.AnnotationText="Begin testing process for order detail records" DisplayName="Test" sap:VirtualizedContainerService.HintSize="1014,9028" sap2010:WorkflowViewState.IdRef="Sequence_17">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each customer record in the OrderDetails Datatable:" DataTable="[OrderDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="952,8760" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each customer record in the OrderDetails Datatable:" DataTable="[OrderDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="952,8882" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="918,8543" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="918,8665" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="876,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[currentCell]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[currentCell+1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
                                     <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Always click on the Order Details tab to exit any error pages" ClickType="Single" DisplayName="Click 'Order Details'" sap:VirtualizedContainerService.HintSize="876,199" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7636dfc3-6bf0-4818-b3fe-429635ff19bc" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="437, 138, 101, 15" CvTextArgument="Order Details" CvType="Text" DesignTimeRectangle="430, 126, 115, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Order Details'" FullSelectorArgument="&lt;webctrl aaname='Order Details' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Order Details' tag='A' type='' class='nav-link text-dark' check:innerText='Order Details' /&gt;" Guid="8f524b38-5dcc-4182-be48-82a509bd7d25" InformativeScreenshot="c30b2c0fb1d17bdf0d59f8d34147e9c0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
@@ -216,7 +225,7 @@
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Create" CvElementArea="131, 394, 360, 41" CvTextArea="145, 408, 10, 14" CvTextArgument="2" CvType="InputBox" DesignTimeRectangle="125, 378, 356, 38" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'100041'" FullSelectorArgument="&lt;webctrl id='OrderId' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='OrderId' tag='SELECT' type='' class='form-control' aaname='Order ID' /&gt;" Guid="7f2eeba5-b399-4049-9d75-13c1d94a9e9d" InformativeScreenshot="ce63b4d14c74d1ee947f7c84d6c979c7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="123, 358, 62, 15" CvTextArgument="Order ID" CvType="Text" DesignTimeRectangle="125, 354, 61, 24" ElementType="Text" FriendlyName="'Order ID'" FullSelectorArgument="&lt;webctrl aaname='Order ID' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Order ID' tag='LABEL' type='' class='control-label' check:innerText='Order ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAcCAYAAAA+59JsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHNSURBVFhH7ZaxTsMwEED5FQYGPivq0C/J0P5JpXxKShgQA4iBAVVqhMQCYomOs3227LMdK6EtSLknnaI49vn87KS9AgFEAiISEJGAiAREJCAiAREJyIUk9LBb3ULV9HT/v0hIMAVf3/ixhT09ncf5JOw3WN+mozuAY7NmtVN4fTihhHarB/BibeK6pYbJXFjCqoEj3Rvsxq5hd6AmD09CB3VCgEMLmnsi/lqCQfdNPHMSxgYb2EIODVTKbKuuyrInSD9TbSaqpktIMNJtHz63XZy+6hxpgVMkuJrZaXASeLIUQR+7UD4htfuvTrwQIyDq4+WyY0qvIK97fDPjeRWBhNJx1RMwCTwhL8oQnqIgj4XtEpeSY5oEU8eohLj4kKBP8milJ+ESdB4UGAeTUKhHMU1C4SSMD1ZkvgkzJZRO3Vkk6Jrjj7uTkLPk4L8OIxLi4k3u4HUoHPXTS2Cb6OFJQKb8T0hKQCiH31cX6ufVY/k8KMpbzEkl0Hy5fKEEjdk1845SpMzmJChIhI26TeyCLcxFmOtXEoK8KjJ1EgkJy0MkICIBEQmISEBEAhJI+Pz6hpfXN7h/fIa7h6fFhJOgBKjF9+8fMAwDtS4BgB+iO6ltT7GU3wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
@@ -227,7 +236,7 @@
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Create" CvElementArea="122, 438, 360, 41" CvTextArea="137, 452, 9, 14" CvTextArgument="2" CvType="InputBox" DesignTimeRectangle="125, 440, 356, 38" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl id='ProductId' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ProductId' tag='SELECT' type='' class='form-control' aaname='Product ID' /&gt;" Guid="43a0c023-6ed2-4adf-8762-3882274697b2" InformativeScreenshot="0bdb62e3ba952de19c7782ea2859c487.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="124, 420, 76, 15" CvTextArgument="Product ID" CvType="Text" DesignTimeRectangle="125, 416, 75, 24" ElementType="Text" FriendlyName="'Product ID'" FullSelectorArgument="&lt;webctrl aaname='Product ID' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Product ID' tag='LABEL' type='' class='control-label' check:innerText='Product ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAcCAYAAAAgLuLfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVGhD7ZrNSsNAEIB9lR568LFKD32SHto3KeRRWutBPCgePEihRfCieCnj/sxud3YmSZdtqOJ8sGA2m52ZL5NE0BtAPr++4f7xGQ7vH3A8HnFW6SLKs1iBL69vTuLdw5OOnkHkKWWovApUXgUqrwKVV4HKq+Dq8jaLWxgttnj0t0jkbWE+NoVkY77G0wNxLXn7ZgajaQN7PIZdAxOh/tF4CRtcksPkEVnrpdtgSIGXlyfUISDLm8Fqh8eIW2f2mzQHnDnRLc8wdGf8dnkO10T8XK88EiQEWIcWT1oauzSONLGIjxHXGGlUnj3PkxQFS/HyOTPaJBbJgwOsprz7yjovvBcyMb61aWB3HXlf+P3TBMIjUSqPxzPFLUJOch05ZfLkG9gpjyWJ8mhibcnSeZYsQpM6R16fnL7znlJ5bn2fPNr22ZdGCuDm5C+SLTp0WvpzSrG8jnieYeTRPD29jy3h38rz77x8z3p5rdfReSeAPbY+KSov3+ucNSln1GEokcfWIheQh5tn80yWu7bvg8Gvk9bweOkHw8uWujyFCRFrwxvX0ukXkWeJRYaRFBtBgWGNLZA+thafR/caHo/ISn5laatHlnfaL4yum5DIU0pReRWovApUXgUqrwKVVwGRp3/0LhtRnv67RSkAP3LdOruw3rwfAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
@@ -238,7 +247,7 @@
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Create" CvElementArea="123, 500, 359, 41" CvType="InputBox" DesignTimeRectangle="125, 502, 356, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Quantity'" FullSelectorArgument="&lt;webctrl id='Quantity' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Quantity' tag='INPUT' type='number' class='form-control' aaname='Quantity' /&gt;" Guid="720077b0-a276-4fff-a53a-06a2cbc7877c" InformativeScreenshot="f651524dc78816aa0f07c828f3a565e0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="123, 482, 64, 19" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="125, 478, 61, 24" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl aaname='Quantity' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Quantity' tag='LABEL' type='' class='control-label' check:innerText='Quantity' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAcCAYAAAA+59JsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVFhH7ZmxbsJADIb7Kgwd+liIgSdhgDdByqNA06Hq0KpDhwoJVKlLqy7I9fl8ic/nNAmFCEh+6STOufjs7+xjyA2wvr5/4OHpBXYfn7Df79naDxUQnByI17d3gnH/+NybEUHoqwYIqAECaoCAGiCgBgioy4WwWsDodgrLDc//IQPCDpaTO9xAjgWs+enZ6GQQyDEmPc/ZwGL7bMXzjrXNpjCaZLDluSmK8bDDEhBymGGi42zHc6Ujkm+rziDQRn868W1SQHKbJoF5kLJivN+ytWLIpc/1vFxT+jVaMzwTSUfv0kD7JoOxdWgGrAICOdJtoERrZBC1EHAufVJg8nmZZPQOziUssxJ0Mkly6tBYVp6tIETBNIKgpQNjCGpfnfRhEFBJjC6+tDraV0JY0xiCt8ly1RD0aR0Ngk7ajPnEd4L3mZZ/dxD8wQX/7rdVpQWEkIAOqBBtoqjqTaOetxLsHgLFRO+6/IznKAEBRY4qgopO1ElD8wnJdbrFgp+2EMwEta3q34D2QHuG6yvaPYZA8sm5YPVISomh+eECiNtB+xpn+UGVIAEXdgMMQae9YruHbwHyMiDYCqdIo+YCPTelUGM1hnC5sqtN6vohWPeJ0hVDCPdR9V0Q1IN2qNcAARVB6P3Hl/5+hgP4Bei3ZWFgZ03QAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
@@ -249,7 +258,7 @@
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Create" CvElementArea="124, 563, 359, 40" CvType="InputBox" DesignTimeRectangle="125, 564, 356, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Discount'" FullSelectorArgument="&lt;webctrl id='Discount' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Discount' tag='INPUT' type='text' class='form-control' aaname='Discount' /&gt;" Guid="28d2ed8f-8234-4fe4-9512-25975c243bb7" InformativeScreenshot="d22a2dff31923ed2fd019b510be805bc.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="124, 544, 63, 15" CvTextArgument="Discount" CvType="Text" DesignTimeRectangle="125, 540, 62, 24" ElementType="Text" FriendlyName="'Discount'" FullSelectorArgument="&lt;webctrl aaname='Discount' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Discount' tag='LABEL' type='' class='control-label' check:innerText='Discount' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAcCAYAAADV0GlvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVFhH7ZmxTsMwEED5FQYGPqvq0C/pkP5JpXxKQxkQA4iBAVVqhMQC6hId5/M53J1rGkpAau0nZXAuPvuezzD0Apj3jx3c3j9C+/oGXdfx23zoRTicjKfnFxJyc/eQ1aNE5EwRwRQRTBHBFBFMEcEcKaKF5fQaLqs1j08fIWIN8yssLnpmsNzwJz0ZiJiveBhYLbyQsyg6USNyWIRjU8MkFTspfisCaSrZFf5qTOqWxxzH+eHRefgqJeLbeqZitvsobjuSDkdcW+rcBTR8aNE6obP3xZDBImgz0xq2NNIidAzBRb/y+LyqEBH3ArEAP0RYmsg3XMSeeSr3CB1BCyVE6G7RRJIktpiAeT9chM1laxpBhC7IXI2+HeOinCR5hRRKrsTnD3sZLkKevuMPROiCjIhAaE+xwfMSES2SEEHo2GhXw+agPf2jCP/HzG5WF9tU30nyedWJ4qbDOj5/PF99z1fPFvRzEekDjETIfy/02JYkrAg9J17I5tYbPjyfu0LOP+pqIPSdzyPfCxF5U0QwRQRTRDBFBFNEMEpE+YEHyfsnP4BPcSzpEFFxBi8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
@@ -305,7 +314,7 @@
                                               <uix:NTypeInto.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Edit/10674" CvElementArea="124, 504, 358, 41" CvType="InputBox" DesignTimeRectangle="125, 506, 356, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Quantity'" FullSelectorArgument="&lt;webctrl id='Quantity' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Quantity' tag='INPUT' type='number' class='form-control' aaname='Quantity' /&gt;" Guid="1cad8722-40de-4296-9c39-417e74829d50" InformativeScreenshot="4c87e095cb54e7f195ff5ba01c10c6d4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Edit - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                       <uix:Target CvTextArea="123, 486, 63, 19" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="125, 482, 61, 24" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl aaname='Quantity' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Quantity' tag='LABEL' type='' class='control-label' check:innerText='Quantity' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAcCAYAAAA+59JsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVFhH7ZmxbsJADIb7Kgwd+liIgSdhgDdByqNA06Hq0KpDhwoJVKlLqy7I9fl8ic/nNAmFCEh+6STOufjs7+xjyA2wvr5/4OHpBXYfn7Df79naDxUQnByI17d3gnH/+NybEUHoqwYIqAECaoCAGiCgBgioy4WwWsDodgrLDc//IQPCDpaTO9xAjgWs+enZ6GQQyDEmPc/ZwGL7bMXzjrXNpjCaZLDluSmK8bDDEhBymGGi42zHc6Ujkm+rziDQRn868W1SQHKbJoF5kLJivN+ytWLIpc/1vFxT+jVaMzwTSUfv0kD7JoOxdWgGrAICOdJtoERrZBC1EHAufVJg8nmZZPQOziUssxJ0Mkly6tBYVp6tIETBNIKgpQNjCGpfnfRhEFBJjC6+tDraV0JY0xiCt8ly1RD0aR0Ngk7ajPnEd4L3mZZ/dxD8wQX/7rdVpQWEkIAOqBBtoqjqTaOetxLsHgLFRO+6/IznKAEBRY4qgopO1ElD8wnJdbrFgp+2EMwEta3q34D2QHuG6yvaPYZA8sm5YPVISomh+eECiNtB+xpn+UGVIAEXdgMMQae9YruHbwHyMiDYCqdIo+YCPTelUGM1hnC5sqtN6vohWPeJ0hVDCPdR9V0Q1IN2qNcAARVB6P3Hl/5+hgP4Bei3ZWFgZ03QAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                                                     </scg:List>
                                                   </uix:TargetAnchorable.Anchors>
@@ -331,7 +340,7 @@
                                                   <uix:NGetText.Target>
                                                     <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails" CvTextArea="140, 386, 70, 14" CvType="AnyWordGroup" DesignTimeRectangle="133, 373, 205, 41" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'99999999'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="77b58888-0388-4670-a8bf-e7ae1112897d" InformativeScreenshot="5dfd0173a8d6a9849069f68c8889dbee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                       <uix:TargetAnchorable.Anchors>
-                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                           <uix:Target CvTextArea="140, 344, 68, 19" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="133, 332, 205, 41" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='                 Quantity             ' check:innerText='Quantity' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANEAAAAtCAYAAAAwao6NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVHhe7dpBbuIwFIDhXoVFFxwLseAcXbCAmyBxhd4AxDGQ4BCuaez42XmJHF4Q0P6fZGkmdUlGys8LaD4cABMiAoyICDAiIsCIiAAjIgKMiAgwIiLAiIgAIyICjIgIMCIiwIiIACMiAoyICDAiIsDoX0R02a/c7HPuZsu9u4RjwFTui+iwbW5KuTan8MNXc3W7ZbzOrTuGo8BURkYkb0htrdzuHLY+xcmtlevQJ5G+FxhrVETHTYxl7hb7azjqycn0zEem9joqwhizFxhQH9F57xYxFOXRrX2392t9aI610Ymw0r74aKVPt/gaN/nvxAmS75OBp9Wco7wOfe+X28bryN4I0vVlbxxAUB+RmDbyBm+JyOLNVhdRHoVc8Tzpd1Zu0QmuCGXoZ4MRbd23OE87ndp/FxMLuuqItEmTuTuikphMYeLJc8fXVq+n5xFNuw59bwq6c55sOgHJC0yivsngVyciEZ4433QRlXtT0Oq/GfAe8Jko3ZQ1EaW/x/iGJtHjI0qv688l/xx+DJTqI/LkxIjT5peYUvJGTfvjTSi/RGiOxT3p9cRnpGdEJL9IWIbzKm8aQDQqoqEvAZqVv2PLKdNdeUTqGhuROCb3qxH17L0pr5tHOQwZGVFjKI5sQnlZJD6KbhByOt1uWMPjnJdf20BEnra3Id4sit8BSndF1FWGEA6/re63dECfiSLyisejd7750oQqPy8BXdNF9AeUn8+YQqhBRIKMiIBQi4gAIyICjIgIMCIiwIiIACMiAoyICDAiIsCIiAAjIgKM2ojk/xljsVj1i0kEGBERYOLcD+mnEFc4Gj5gAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                                                         </scg:List>
                                                       </uix:TargetAnchorable.Anchors>
@@ -406,7 +415,7 @@
                                                                   </uix:NClick.Target>
                                                                 </uix:NClick>
                                                               </Sequence>
-                                                              <uix:NGetUrl CurrentUrl="[currentURL]" DelayBefore="1" DisplayName="Get current URL" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
+                                                              <uix:NGetUrl CurrentUrl="[currentURL]" DelayBefore="1.5" DisplayName="Get current URL" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
                                                               <If Condition="[String.Compare(currentUrl, targetUrl) = 0]" DisplayName="If (CurrentURL==TartgetURL)" sap:VirtualizedContainerService.HintSize="510,1042" sap2010:WorkflowViewState.IdRef="If_1">
                                                                 <If.Then>
                                                                   <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="476,430" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -415,7 +424,7 @@
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;TRUE&quot;]" />
+                                                                    <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;TRUE&quot;]" />
                                                                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Order Detail &quot; + currentRow.Item(&quot;OrderDetailsID&quot;).ToString + &quot; passed the test&quot;]" />
                                                                   </Sequence>
                                                                 </If.Then>
@@ -426,7 +435,7 @@
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;FALSE&quot;]" />
+                                                                    <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;FALSE&quot;]" />
                                                                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;A problem occured when trying to delete record for Order Detail: &quot; + currentRow.Item(&quot;OrderDetailsID&quot;).ToString]" />
                                                                   </Sequence>
                                                                 </If.Else>
@@ -440,7 +449,7 @@
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;FALSE&quot;]" />
+                                                              <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;FALSE&quot;]" />
                                                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;A problem occured when trying to view record for OrderDetail: &quot; + CurrentRow.Item(&quot;OrderDetailsID&quot;).ToString]" />
                                                             </Sequence>
                                                           </If.Else>
@@ -455,7 +464,7 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[&quot;FALSE&quot;]" />
+                                                      <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[&quot;FALSE&quot;]" />
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;The record for Order Detail: &quot; + CurrentRow.Item(&quot;OrderDetailsID&quot;).ToString + &quot; was not edited as expected.&quot;]" />
                                                     </Sequence>
                                                   </If.Else>
@@ -469,7 +478,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[&quot;FALSE&quot;]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[&quot;FALSE&quot;]" />
                                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;A problem occured when trying to edit record for Order Detail: &quot; + CurrentRow.Item(&quot;OrderDetailsID&quot;).ToString]" />
                                               </Sequence>
                                             </If.Else>
@@ -483,7 +492,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(objectName).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[&quot;FALSE&quot;]" />
+                                          <ueab:WriteCellX Cell="[Excel.Sheet(objectName).Cell(&quot;F&quot;+currentCell.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[&quot;FALSE&quot;]" />
                                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;A problem occured when trying to create record for OrderDetail: &quot; + CurrentRow.Item(&quot;OrderDetailsID&quot;).ToString]" />
                                         </Sequence>
                                       </If.Else>

@@ -12,27 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dataFilePath&Sequence_1"
+        "filePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Customer.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "prevCellPhone&Sequence_1",
-        "canRead&Sequence_1",
-        "targetURL&Sequence_1",
-        "objectName&Sequence_1",
-        "Customers&Sequence_1",
-        "currentCellPhone&Sequence_1",
-        "currentURL&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "data_file_path"
-      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -54,19 +36,77 @@
       "Path": "Order.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "currentURL&Sequence_5",
-        "targetURL&Sequence_5",
-        "hours&Sequence_5",
-        "minutes&Sequence_5",
-        "day&Sequence_5",
-        "month&Sequence_5",
-        "year&Sequence_5",
+        "canRead&Sequence_1",
+        "prevAddress&Sequence_1",
+        "currentAddress&Sequence_1",
+        "currentURL&Sequence_1",
+        "targetURL&Sequence_1",
+        "hours&Sequence_1",
+        "minutes&Sequence_1",
+        "day&Sequence_1",
+        "month&Sequence_1",
+        "year&Sequence_1",
         "matchPattern&Sequence_1",
         "Orders&Sequence_1",
-        "objectName&Sequence_1",
-        "tempFilePath&Sequence_1"
+        "objectName&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Customer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "canRead&Sequence_1",
+        "prevCellPhone&Sequence_1",
+        "currentCellPhone&Sequence_1",
+        "targetURL&Sequence_1",
+        "currentURL&Sequence_1",
+        "objectName&Sequence_1",
+        "Customers&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Product.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "currentDesc&Sequence_1",
+        "prevDesc&Sequence_1",
+        "Product&Sequence_1",
+        "objectName&Sequence_1",
+        "targetURL&Sequence_1",
+        "currentURL&Sequence_1",
+        "canRead&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "OrderDetail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "prevQuantity&Sequence_1",
+        "currentQuantity&Sequence_1",
+        "OrderDetails&Sequence_1",
+        "objectName&Sequence_1",
+        "currentURL&Sequence_1",
+        "targetURL&Sequence_1",
+        "canRead&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "filePath"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
