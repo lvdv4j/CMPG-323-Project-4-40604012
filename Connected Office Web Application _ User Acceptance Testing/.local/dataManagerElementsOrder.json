@@ -12,6 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "moreTests&Sequence_20",
+        "shouldStopRetry&Sequence_1",
+        "selectedOption&Sequence_1",
         "filePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -36,6 +39,7 @@
       "Path": "Order.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currentCell&Sequence_1",
         "canRead&Sequence_1",
         "prevAddress&Sequence_1",
         "currentAddress&Sequence_1",
@@ -60,6 +64,7 @@
       "Path": "Customer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currentCell&Sequence_1",
         "canRead&Sequence_1",
         "prevCellPhone&Sequence_1",
         "currentCellPhone&Sequence_1",
@@ -78,6 +83,7 @@
       "Path": "Product.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currentCell&Sequence_1",
         "currentDesc&Sequence_1",
         "prevDesc&Sequence_1",
         "Product&Sequence_1",
@@ -96,6 +102,7 @@
       "Path": "OrderDetail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currentCell&Sequence_1",
         "prevQuantity&Sequence_1",
         "currentQuantity&Sequence_1",
         "OrderDetails&Sequence_1",
@@ -107,6 +114,16 @@
       "ArgumentsSectionElementsOrder": [
         "filePath"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Logout.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "canLogout&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
