@@ -78,6 +78,6 @@ The following stretch tasks were done for the project:
  The bot would throw an error stating that multiple UI elements of the same type was found and this would result in the testing process not completing. To solve this error I made use of the concept of dynamic selectors, ensuring that the bot will only work on the last added record in the table.
 - Doing multiple tests in one session: Also not something that was included in the rubric or brief - I allow the user to continue performing more tests after a test has been completed by making use of a Retry Scope activity. This ensures that the user will be able to run tests until they are satisfied/finished, without having to restart the bot each time.   
 
-All the above mentioned tasks were completed ahead of the project milestone.
+All the above mentioned tasks were completed ahead of the project milestone and were also added to the Kanban Project board.
 
 ## References
