@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="944,7116" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="944,7386" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -96,7 +96,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="680,7051" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="752,7321" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="filePath" />
       <Variable x:TypeArguments="x:String" Name="selectedOption" />
@@ -111,16 +111,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="618,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Login.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="690,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="618,138" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[filePath]" />
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="618,6609" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="999999999">
+    <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="690,138" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[filePath]" />
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="690,6879" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="999999999">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="576,6320" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="648,6590" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="moreTests" />
             </Sequence.Variables>
@@ -129,12 +129,12 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="514,292" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What would you like to test?" OptionsString="Customers;Orders;Order Details;Products;All;Log Out" Title="Select Option">
+            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="586,292" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What would you like to test?" OptionsString="Customers;Orders;Order Details;Products;All;Log Out" Title="Select Option">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[selectedOption]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <If Condition="[selectedOption = &quot;Customers&quot;]" sap:VirtualizedContainerService.HintSize="514,611" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[selectedOption = &quot;Customers&quot;]" sap:VirtualizedContainerService.HintSize="586,611" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="480,429" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -181,7 +181,7 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
               </If.Else>
             </If>
-            <If Condition="[selectedOption = &quot;Orders&quot;]" sap:VirtualizedContainerService.HintSize="514,611" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[selectedOption = &quot;Orders&quot;]" sap:VirtualizedContainerService.HintSize="586,611" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="480,429" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -228,7 +228,7 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5" />
               </If.Else>
             </If>
-            <If Condition="[selectedOption = &quot;Order Details&quot;]" sap:VirtualizedContainerService.HintSize="514,611" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[selectedOption = &quot;Order Details&quot;]" sap:VirtualizedContainerService.HintSize="586,611" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="480,429" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
@@ -277,7 +277,7 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
               </If.Else>
             </If>
-            <If Condition="[selectedOption = &quot;Products&quot;]" sap:VirtualizedContainerService.HintSize="514,611" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[selectedOption = &quot;Products&quot;]" sap:VirtualizedContainerService.HintSize="586,611" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="480,429" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -324,7 +324,7 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
               </If.Else>
             </If>
-            <If Condition="[selectedOption = &quot;All&quot;]" sap:VirtualizedContainerService.HintSize="514,1754" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[selectedOption = &quot;All&quot;]" sap:VirtualizedContainerService.HintSize="586,1754" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="480,1572" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
@@ -470,7 +470,7 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_15" />
               </If.Else>
             </If>
-            <If Condition="[selectedOption = &quot;Log Out&quot;]" sap:VirtualizedContainerService.HintSize="514,585" sap2010:WorkflowViewState.IdRef="If_6">
+            <If Condition="[selectedOption = &quot;Log Out&quot;]" sap:VirtualizedContainerService.HintSize="586,585" sap2010:WorkflowViewState.IdRef="If_6">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="476,323" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
@@ -503,45 +503,59 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="514,292" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Would you like to run more tests?" OptionsString="Yes;No" Title="Test More?">
-              <ui:InputDialog.Result>
-                <OutArgument x:TypeArguments="x:String">[moreTests]</OutArgument>
-              </ui:InputDialog.Result>
-            </ui:InputDialog>
-            <If Condition="[moreTests = &quot;No&quot;]" sap:VirtualizedContainerService.HintSize="514,522" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[shouldStopRetry = False]" sap:VirtualizedContainerService.HintSize="586,1124" sap2010:WorkflowViewState.IdRef="If_8">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence sap:VirtualizedContainerService.HintSize="552,942" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Boolean">[shouldStopRetry]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                    </Assign.Value>
-                  </Assign>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="510,292" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Would you like to run more tests?" OptionsString="Yes;No" Title="Test More?">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[moreTests]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <If Condition="[moreTests = &quot;No&quot;]" sap:VirtualizedContainerService.HintSize="510,522" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[shouldStopRetry]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[shouldStopRetry]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Boolean">[shouldStopRetry]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                </Sequence>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_26" />
               </If.Else>
             </If>
           </Sequence>
