@@ -49,9 +49,11 @@ You can choose from the following options:
 
 Once you have selected an option, click ok and the bot will begin testing your chosen tab of the website with your data. This might take a while depending on your network connection as well as the general speed of your computer.
 
+![image](https://github.com/lvdv4j/CMPG-323-Project-4-40604012/assets/104925498/074047a3-ff95-484e-930a-33c909ff366a)
+
 If you choose to log out, the bot will log you out of the website and display a message box stating that you have been logged out.
 
-![image](https://github.com/lvdv4j/CMPG-323-Project-4-40604012/assets/104925498/074047a3-ff95-484e-930a-33c909ff366a)
+![image](https://github.com/lvdv4j/CMPG-323-Project-4-40604012/assets/104925498/cee30e83-6328-43bc-83ab-8e9a0a4c1e1f)
 
 #### During testing
 You need not do anything to help or aid the bot during testing. You will be able to see how it interacts with the web browser as well as how it writes to your chosen Excel file. You'll notice that as a data record passes or fails the test cases defined within the bot, the bot will write TRUE or FALSE respectivly. If you have UiPath studio and are using that to run the bot, you will be able to get more information about why a certain data record failed a test by reading the output logs. 
@@ -67,8 +69,15 @@ After the testing process is completed the bot will close the browser as well as
 
 ### Stretch tasks for the project
 The following stretch tasks were done for the project:
-- Error handling:
-- Log out function:
-- Dealing with multiple row entries on the website:
-- Doing multiple tests in one session:
+- Error handling: Although this was not requested in the brief or the rubric, I did error handling for the following:
+  1. the login process - if the incorrect login details were given, I made sure that the bot would ask for the details again
+  2. during the testing process for any of the entities - if there was a UI element not found error, my program will throw an exception message in a messagebox to ensure a good user experience.
+  3. the log out process - if the user is already logged out, the program will notify the user with a messagebox.
+- Log out function: This function was not requested in the project brief but I added it for some extra functionality.
+- Dealing with multiple row entries on the website: Originally my project could only perform CRUD testing if there was only 1 row present in the website table at a time. If there were more than one, for example: ![image](https://github.com/lvdv4j/CMPG-323-Project-4-40604012/assets/104925498/a2954813-970a-4056-8210-cb8477d80a38)
+ The bot would throw an error stating that multiple UI elements of the same type was found and this would result in the testing process not completing. To solve this error I made use of the concept of dynamic selectors, ensuring that the bot will only work on the last added record in the table.
+- Doing multiple tests in one session: Also not something that was included in the rubric or brief - I allow the user to continue performing more tests after a test has been completed by making use of a Retry Scope activity. This ensures that the user will be able to run tests until they are satisfied/finished, without having to restart the bot each time.   
+
 All the above mentioned tasks were completed ahead of the project milestone.
+
+## References
