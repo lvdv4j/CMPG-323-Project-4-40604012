@@ -81,3 +81,5 @@ The following stretch tasks were done for the project:
 All the above mentioned tasks were completed ahead of the project milestone and were also added to the Kanban Project board.
 
 ## References
+
+This word document contains the list of references I used when creating my project: [Project_4_references.docx](https://github.com/lvdv4j/CMPG-323-Project-4-40604012/files/13034990/Project_4_references.docx)
